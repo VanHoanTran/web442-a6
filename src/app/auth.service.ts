@@ -48,7 +48,7 @@ export class AuthService {
   }
 
   register(user: RegisterUser): Observable<any> {
-    return this.http.post<any>(`${this.userAPIBase}/register`, user);
+    return this.http.post<any>(`https:/hidden-reef-44552.herokuapp.com/api/user/register`, user);
     //return this.http.post<any>(`/register`, user);
   }
 }
