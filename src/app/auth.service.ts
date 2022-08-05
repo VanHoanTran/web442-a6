@@ -39,7 +39,8 @@ export class AuthService {
     
   }
   login(user: User): Observable<any> {
-    return this.http.post<any>(`${this.userAPIBase}/login`, user);
+   // return this.http.post<any>(`${this.userAPIBase}/login`, user);
+    return this.http.post<any>(`/login`, user);
   }
 
   logout() {
@@ -47,6 +48,7 @@ export class AuthService {
   }
 
   register(user: RegisterUser): Observable<any> {
-    return this.http.post<any>(`${this.userAPIBase}/register`, user);
+   // return this.http.post<any>(`${this.userAPIBase}/register`, user);
+    return this.http.post<any>(`/register`, user);
   }
 }
