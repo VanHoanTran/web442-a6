@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { MusicDataService } from '../music-data.service';
@@ -40,16 +40,6 @@ export class AlbumComponent implements OnInit, OnDestroy {
           }
         );
       },
-      (err) => {
-        console.log(err);
-        this.snackBar.open(
-          '"Unable to add song to Favourites...',
-          'Done',
-          {
-            duration: 1500,
-          }
-        );
-      }
     );
   }
 

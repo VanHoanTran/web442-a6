@@ -12,7 +12,7 @@ import RegisterUser from './RegisterUser';
 })
 export class AuthService {
 
-  private userAPIBase = environment.userAPIBase;
+  //private userAPIBase = environment.userAPIBase;
   constructor( private http: HttpClient) { }
 
   public getToken(): string | null {
@@ -39,7 +39,7 @@ export class AuthService {
     
   }
   login(user: User): Observable<any> {
-    return this.http.post<any>(`${this.userAPIBase}/login`, user);
+    return this.http.post<any>(`${environment.userAPIBase}/login`, user);
     //return this.http.post<any>(`/login`, user);
   }
 
@@ -48,7 +48,7 @@ export class AuthService {
   }
 
   register(user: RegisterUser): Observable<any> {
-    return this.http.post<any>(`https:/hidden-reef-44552.herokuapp.com/api/user/register`, user);
+    return this.http.post<any>(`${environment.userAPIBase}/register`, user);
     //return this.http.post<any>(`/register`, user);
   }
 }
