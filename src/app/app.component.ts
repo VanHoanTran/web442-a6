@@ -6,9 +6,9 @@
  *
  * Name  : Van Hoan Tran Student ID: 138415203 Date: 08/05/2022
  *
- * Angular App (Deployed) Link: _____________________________________________________
+ * Angular App (Deployed) Link: https://relaxed-croquembouche-d0f64e.netlify.app/login
  *
- * User API (Heroku) Link: https:/hidden-reef-44552.herokuapp.com/api/user
+ * User API (Heroku) Link: https://hidden-reef-44552.herokuapp.com/api/user
  *
  ********************************************************************************/
 import { Component,OnInit } from '@angular/core';
