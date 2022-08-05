@@ -20,13 +20,12 @@ export class RegisterComponent implements OnInit {
 
 
   private registerSub: any;
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
   }
   
   onSubmit(f: NgForm): void {
-    //console.log(this.user);
 
     if (
       this.registerUser.userName != '' &&
@@ -35,15 +34,13 @@ export class RegisterComponent implements OnInit {
     ) {
       this.loading = true;
       this.registerSub = this.authService.register(this.registerUser).subscribe(
-        (success) => {
-          //console.log(success);
+        (success) => {;
           this.warning = '';
           this.success = true;
           this.loading = false;
         },
         (err) => {
           this.warning = err.error.message;
-          
           this.success = false;
           this.loading = false;
         }
